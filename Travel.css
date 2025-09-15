@@ -1123,7 +1123,7 @@ body.dark .footer-col a {
 
 /*swiss page*/
 .Swiss-hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://www.adventuresbydisney.com/content/dam/abd/destinations/europe/switzerland/header-slideshow-media/AS_509485371.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/morgan_thompson_I7q8s0_K_Nhn0_unsplash_eb278f3b2e.jpg?auto=format,compress&fit=crop&crop=edges&w=3840") center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;

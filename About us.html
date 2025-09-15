@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="Travel.css">
   <title>About us</title>
 
@@ -28,13 +30,13 @@
 
   <!-- Hero -->
   <section class="About-hero">
-<h1>Meet the <br> <span>TravelQuest Team</span></h1>
-<p>Passionate explorers dedicated to bringing you the world’s best travel experiences</p>
+<h1 data-aos="fade-up">Meet the <br> <span>TravelQuest Team</span></h1>
+<p data-aos="fade-up">Passionate explorers dedicated to bringing you the world’s best travel experiences</p>
   </section>
 
     <footer>
     <div class="footer-top">
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up">
         <h3>🌍 WanderGuide</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
@@ -45,7 +47,7 @@
         </div>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up">
         <h3>Top Destinations</h3>
         <a href="#">Santorini, Greece</a>
         <a href="#">Kyoto, Japan</a>
@@ -55,7 +57,7 @@
         <a href="#">Bali, Indonesia</a>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up">
         <h3>Travel Resources</h3>
         <a href="#">Travel Guides</a>
         <a href="#">Packing Lists</a>
@@ -65,13 +67,13 @@
         <a href="#">Travel Insurance</a>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up">
         <h3>Get in Touch</h3>
         <p>📧 hello@wanderguide.com</p>
         <p>📞 +1 (234) 567-8900</p>
         <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
 
-        <div class="footer-newsletter">
+        <div class="footer-newsletter" data-aos="fade-up">
           <h4>Weekly Travel Newsletter</h4>
           <input type="email" placeholder="Your email">
           <button>Join</button>
@@ -83,6 +85,13 @@
       © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
     </div>
   </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // Animation duration (ms)
+    once: false,      // Animate only once per scroll
+  });
+</script>
   <script src="Travel.js"></script>
   </body>
   </html>
