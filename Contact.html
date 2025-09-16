@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="Travel.css">
@@ -11,22 +12,25 @@
   </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="logo">
-       <a href="index.html">TravelQuest</a>
-    </div>
-    <div class="burger" id="burger" onclick="toggleMenu()">☰</div>
-    <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Destinations.html">Destinations</a>
-      <a href="Themes.html">Themes</a>
-      <a href="Stories.html">Stories</a>
-      <a href="About us.html">About</a>
-      <a href="Contact.html">Contact</a>
-      <button class="plan-btn">Plan Trip</button>
-      <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-    </nav>
-  </header>
+<header class="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="Pictures/Travel logo.png" alt="logo" />
+      <span>TravelQuest</span>
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="Destinations.html">Destinations</a>
+    <a href="Themes.html">Themes</a>
+    <a href="Stories.html">Stories</a>
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
+</header>
 
   <!-- Hero -->
   <section class="Contact-hero">
