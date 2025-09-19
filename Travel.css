@@ -1126,7 +1126,19 @@ body.dark footer {
 body.dark .footer-col a {
   color: #aaa;
 }
-
+body.dark .container h1{
+  color: #ffffff;
+}
+body.dark .place-card{
+  background-color: #000000;
+  color: #ffffff;
+}
+body.dark .card-content h3{
+  color: var(--primary);
+}
+body.dark .card-content p{
+  color: #ffffff;
+}
 /*Sri lanka page*/
 .SL-hero {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Sigiriya.jpg") center/cover no-repeat;
@@ -1162,7 +1174,7 @@ body.dark .footer-col a {
 }
 .container h1{
   font-size: 40px;
-  color: #ffffff;
+  color: #000000;
 }
 /*Places section*/
 .places-section{
@@ -1197,11 +1209,11 @@ body.dark .footer-col a {
 }
 .card-content h3 {
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: var(--primary);
 }
 .card-content p {
   font-size: 0.95rem;
-  color: #555;
+  color: #000000;
   line-height: 1.4;
 }
 /*Maldives page*/
@@ -1351,4 +1363,130 @@ body.dark .footer-col a {
 }
 .JPplaces-section{
   background: linear-gradient(180deg, rgba(100, 149, 237, 0.6), rgba(138, 138, 138, 0.4));
+}
+
+/*Uk page*/
+.UK-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://media.cntraveler.com/photos/571f9be4afc531496352d2a9/master/w_5124,h_3425,c_limit/GettyImages-174726708.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.UK-hero h1 {
+  font-size: 68px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.UK-hero h1 span {
+  color: var(--accent);
+}
+
+.UK-hero p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.UKplaces-section{
+  background:linear-gradient(180deg, rgba(70, 130, 180, 0.6), 
+  rgba(100, 149, 237, 0.6));
+}
+
+/*Ausi page*/
+.ausi-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://images.pexels.com/photos/995764/pexels-photo-995764.jpeg?cs=srgb&dl=pexels-patrick-995764.jpg&fm=jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.ausi-hero h1 {
+  font-size: 68px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.ausi-hero h1 span {
+  color: var(--accent);
+}
+
+.ausi-hero p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.ausiplaces-section{
+  background: linear-gradient(180deg, rgba(55, 118, 169, 0.6), rgba(138, 138, 138, 0.4));
+}
+
+/*Canada page*/
+.canada-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://cms.inspirato.com/ImageGen.ashx?image=%2Fmedia%2F5714967%2FToronto_Dest_19487682.jpg&width=1081.5") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.canada-hero h1 {
+  font-size: 68px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.canada-hero h1 span {
+  color: var(--accent);
+}
+
+.canada-hero p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.canadaplaces-section{
+  background: linear-gradient(180deg, rgba(55, 118, 169, 0.6), rgba(138, 138, 138, 0.4));
+}
+
+/*UAE page*/
+.UAE-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://admin.expatica.com/ae/wp-content/uploads/sites/15/2019/11/united-arab-emirates-1536x1024.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.UAE-hero h1 {
+  font-size: 68px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.UAE-hero h1 span {
+  color: var(--accent);
+}
+
+.UAE-hero p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.UAEplaces-section{
+  background: linear-gradient(180deg, rgba(238, 214, 175, 0.6) /* Light Sandy */
+, rgba(138, 138, 138, 0.4));
 }
