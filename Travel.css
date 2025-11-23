@@ -206,7 +206,7 @@ nav {
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://images.unsplash.com/photo-1752257401535-d4cdf860e1a4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("Pictures/Home page hero section img.png") center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -268,6 +268,7 @@ nav {
   color: #ffffff;
   box-shadow: 0 6px 15px rgba(52, 248, 248, 0.6);
 }
+
 /*Destination page hero section*/
 .Destinations-hero {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/27199/file-manager/adventure-tourism.jpg") center/cover no-repeat;
@@ -439,7 +440,12 @@ section {
 }
 
 section h2 {
-  font-size: 32px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+section h4 {
+  font-size: 20px;
   margin-bottom: 20px;
   color: var(--primary);
 }
