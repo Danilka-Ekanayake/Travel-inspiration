@@ -206,16 +206,42 @@ nav {
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("Pictures/Home page hero section img.png") center/cover no-repeat;
+  position: relative;
   height: 70vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
-  padding: 20px;
 }
+
+/* Video background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 
 .hero h1 {
   font-size: 68px;
@@ -229,33 +255,34 @@ nav {
 
 .hero p {
   font-size: 20px;
-  margin: 10px 0;
+  margin: 10px 0 25px;
 }
 
+/* Buttons */
 .hero-buttons .btn {
-      padding: 15px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      background: linear-gradient(135deg, #f8a634, #ff8c42);
-      color: white;
-      transition: 0.3s ease;
-      box-shadow: 0 4px 12px rgba(248, 166, 52, 0.4);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f8a634, #ff8c42);
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(248, 166, 52, 0.4);
 }
 
 .hero-buttons .btn2 {
-      padding: 15px 25px;
-      border: 2px solid #ffffff;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      background: transparent;
-      color: white;
-      transition: 0.3s ease;
-      box-shadow: 0 4px 12px rgba(52, 248, 248, 0.45);
+  padding: 15px 25px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 248, 248, 0.45);
 }
 
 .hero-buttons .btn:hover {
@@ -265,9 +292,9 @@ nav {
 
 .hero-buttons .btn2:hover {
   border: 2px solid #12908E;
-  color: #ffffff;
   box-shadow: 0 6px 15px rgba(52, 248, 248, 0.6);
 }
+
 
 /*Destination page hero section*/
 .Destinations-hero {
