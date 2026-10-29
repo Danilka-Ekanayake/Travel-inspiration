@@ -1037,6 +1037,10 @@ body.dark .price {
     transition: max-height 0.35s ease, opacity 0.35s ease;
   }
 
+  body.dark nav {
+    background: rgba(15, 23, 32, 0.98);
+  }
+
   .nav.nav-active {
     max-height: 500px;
     opacity: 1;
@@ -3529,7 +3533,7 @@ body.dark .stories-invite {
 }
 
 .about-hero-new__image {
-  background: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=90") center 48% / cover;
+  background: url("Pictures/About hero.jpg") center 48% / cover;
   animation: about-landscape-drift 24s ease-in-out infinite alternate;
 }
 
@@ -5206,7 +5210,7 @@ body.dark .contact-bottom {
 }
 
 .destinations-hero__image {
-  background: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90") center 48% / cover;
+  background: url("Pictures/Destination hero.jpg") center 48% / cover;
   animation: destination-landscape-drift 25s ease-in-out infinite alternate;
 }
 
@@ -6859,6 +6863,12 @@ body.dark .home-newsletter__form input {
     width: auto;
   }
 
+  .home-body .header-cta {
+    display: inline-flex;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
   .home-hero {
     min-height: 680px;
     min-height: min(780px, calc(100svh - 72px));
@@ -7074,7 +7084,7 @@ body.dark .home-newsletter__form input {
   }
 
   .home-place--large {
-    min-height: 200px;
+    min-height: 0;
   }
 
   .home-place__caption strong {
@@ -7197,7 +7207,7 @@ body.dark .home-newsletter__form input {
 }
 
 .trip-hero::before {
-  background: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88") center 48% / cover;
+  background: url("Pictures/Plan a trip hero.jpg") center 48% / cover;
   animation: trip-landscape-drift 22s ease-in-out infinite alternate;
 }
 
