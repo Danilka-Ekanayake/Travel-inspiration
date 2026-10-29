@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="Travel.css">
   <title>Themes</title>
 
   </head>
-<body>
+<body class="themes-body">
   <!-- Header -->
 <header class="header">
   <div class="logo">
@@ -29,25 +28,129 @@
     <a href="Contact.html">Contact</a>
   </nav>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
+  <div class="header-actions">
+    <a href="Plan a trip.html" class="header-cta">Plan a trip</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
+  </div>
 </header>
 
-  <!-- Hero -->
-  <section class="theme-hero">
-<h1 data-aos="fade-up">Travel Your Way <br> <span>Pick a Theme</span></h1>
-<p data-aos="fade-up">Adventure, relaxation, culture, or luxury – find experiences that excite you</p>
-  </section>
+  <main class="themes-page">
+    <section class="themes-hero" aria-labelledby="themes-title">
+      <div class="themes-hero__image" aria-hidden="true"></div>
+      <div class="themes-hero__content" data-reveal>
+        <span class="themes-eyebrow"><i class="fa-solid fa-compass"></i> Find your kind of somewhere</span>
+        <h1 id="themes-title">The world, <em>your way.</em></h1>
+        <p>Chase a feeling, not just a place. Find the kind of trip you’ll still be talking about years from now.</p>
+        <a class="themes-button themes-button--light" href="#explore-themes">Find your travel style <i class="fa-solid fa-arrow-down"></i></a>
+        <div class="themes-hero__note"><span class="themes-hero__sparkle">✳</span> A little inspiration goes a long way</div>
+      </div>
+      <div class="themes-hero__caption"><span>Somewhere between here and unforgettable</span><span>01 / 06</span></div>
+      <div class="themes-hero__orb themes-hero__orb--one" aria-hidden="true"></div>
+      <div class="themes-hero__orb themes-hero__orb--two" aria-hidden="true"></div>
+    </section>
+
+    <section class="themes-intro" id="explore-themes" aria-labelledby="themes-heading">
+      <div class="themes-intro__copy" data-reveal>
+        <span class="themes-kicker">Make it yours</span>
+        <h2 id="themes-heading">What are you <em>in the mood for?</em></h2>
+      </div>
+      <p class="themes-intro__text" data-reveal>From salt in your hair to a trail that takes your breath away, start with what moves you. Your next great story is waiting.</p>
+    </section>
+
+    <section class="themes-explorer" aria-label="Explore travel themes">
+      <div class="themes-controls" data-reveal>
+        <div class="themes-filters" role="group" aria-label="Filter themes">
+          <button class="themes-filter is-active" type="button" data-filter="all" aria-pressed="true">All moods <span>06</span></button>
+          <button class="themes-filter" type="button" data-filter="coast" aria-pressed="false">By the water</button>
+          <button class="themes-filter" type="button" data-filter="outdoors" aria-pressed="false">Outdoors</button>
+          <button class="themes-filter" type="button" data-filter="culture" aria-pressed="false">Culture</button>
+          <button class="themes-filter" type="button" data-filter="city" aria-pressed="false">City breaks</button>
+        </div>
+        <label class="themes-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Search travel themes</span>
+          <input type="search" id="theme-search" placeholder="Search a feeling..." autocomplete="off">
+        </label>
+      </div>
+
+      <p class="themes-results" aria-live="polite"><span id="themes-result-count">6</span> <span id="themes-result-label">ways</span> to find your next favorite place</p>
+
+      <div class="themes-cards">
+        <article class="theme-tile theme-tile--coast" data-category="coast" data-search="beach coast island ocean swim sunshine relax">
+          <a class="theme-tile__link" href="Maldives.html" aria-label="Explore beach and island escapes in the Maldives">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Turquoise waves rolling onto a tropical beach" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">01</span><span class="theme-tile__tag">Slow down</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-water"></i></span><span class="theme-tile__label">Saltwater state of mind</span><strong>Beach &amp; island escapes</strong><span class="theme-tile__bottom">Find your blue <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+
+        <article class="theme-tile theme-tile--outdoors" data-category="outdoors" data-search="mountain alpine hike snow peaks adventure outdoors">
+          <a class="theme-tile__link" href="Swiss alps.html" aria-label="Explore mountain adventures in the Swiss Alps">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Snow-capped mountain peaks rising above the clouds" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">02</span><span class="theme-tile__tag">Go higher</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-mountain-sun"></i></span><span class="theme-tile__label">Take the scenic route</span><strong>Mountain adventures</strong><span class="theme-tile__bottom">Meet the mountains <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+
+        <article class="theme-tile theme-tile--city" data-category="city culture" data-search="city urban architecture food nightlife shopping culture">
+          <a class="theme-tile__link" href="Japan.html" aria-label="Explore city culture and energy in Japan">
+            <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="City skyline glowing at dusk" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">03</span><span class="theme-tile__tag">Feel the buzz</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-city"></i></span><span class="theme-tile__label">The city is calling</span><strong>Big-city energy</strong><span class="theme-tile__bottom">Find your next city <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+
+        <article class="theme-tile theme-tile--nature" data-category="outdoors" data-search="forest nature hiking trail wildlife green outdoors">
+          <a class="theme-tile__link" href="Canada.html" aria-label="Explore forest trails and nature in Canada">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sunlight filtering through a quiet green forest" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">04</span><span class="theme-tile__tag">Get out there</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-leaf"></i></span><span class="theme-tile__label">A breath of fresh air</span><strong>Wild nature trails</strong><span class="theme-tile__bottom">Wander off-grid <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+
+        <article class="theme-tile theme-tile--culture" data-category="culture" data-search="culture heritage history temples traditions art architecture">
+          <a class="theme-tile__link" href="Sri lanka.html" aria-label="Explore culture and heritage in Sri Lanka">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Ancient temple architecture surrounded by lush greenery" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">05</span><span class="theme-tile__tag">Look closer</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-landmark"></i></span><span class="theme-tile__label">Stories in every stone</span><strong>Culture &amp; heritage</strong><span class="theme-tile__bottom">Step into the story <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+
+        <article class="theme-tile theme-tile--wildlife" data-category="outdoors" data-search="wildlife safari animals nature adventure photography">
+          <a class="theme-tile__link" href="Ausi.html" aria-label="Explore wildlife and open landscapes in Australia">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Wild deer standing in a sunlit forest clearing" loading="lazy">
+            <span class="theme-tile__shade"></span>
+            <span class="theme-tile__top"><span class="theme-tile__number">06</span><span class="theme-tile__tag">Stay curious</span></span>
+            <span class="theme-tile__content"><span class="theme-tile__icon"><i class="fa-solid fa-binoculars"></i></span><span class="theme-tile__label">Follow the wild</span><strong>Wildlife &amp; open roads</strong><span class="theme-tile__bottom">See what’s out there <i class="fa-solid fa-arrow-right"></i></span></span>
+          </a>
+        </article>
+      </div>
+      <p class="themes-empty" id="themes-empty" hidden>No themes match that search yet. Try another mood or keyword.</p>
+    </section>
+
+    <section class="themes-note" data-reveal aria-label="Travel inspiration">
+      <span class="themes-note__icon"><i class="fa-solid fa-sun"></i></span>
+      <div><span class="themes-kicker">No wrong turns here</span><h2>The best trips start with <em>a feeling.</em></h2></div>
+      <a class="themes-button" href="Plan a trip.html">Let’s plan yours <i class="fa-solid fa-arrow-right"></i></a>
+      <span class="themes-note__decoration" aria-hidden="true">✳</span>
+    </section>
+  </main>
 
     <footer>
     <div class="footer-top">
       <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
 
@@ -73,9 +176,9 @@
 
       <div class="footer-col" data-aos="fade-up">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
 
         <div class="footer-newsletter" data-aos="fade-up">
           <h4>Weekly Travel Newsletter</h4>
@@ -86,15 +189,66 @@
     </div>
 
     <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
+      © 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
     </div>
   </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      // Animate only once per scroll
+  document.documentElement.classList.add('has-reveal');
+  const themeCards = Array.from(document.querySelectorAll('.theme-tile'));
+  const themeFilters = document.querySelectorAll('.themes-filter');
+  const themeSearch = document.querySelector('#theme-search');
+  const resultCount = document.querySelector('#themes-result-count');
+  const resultLabel = document.querySelector('#themes-result-label');
+  const emptyState = document.querySelector('#themes-empty');
+  let activeFilter = 'all';
+
+  function updateThemeCards() {
+    const query = themeSearch.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    themeCards.forEach((card) => {
+      const categories = card.dataset.category.split(' ');
+      const matchesFilter = activeFilter === 'all' || categories.includes(activeFilter);
+      const matchesSearch = `${card.dataset.search} ${card.textContent}`.toLowerCase().includes(query);
+      const isVisible = matchesFilter && matchesSearch;
+
+      card.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    resultCount.textContent = visibleCount;
+    resultLabel.textContent = visibleCount === 1 ? 'way' : 'ways';
+    emptyState.hidden = visibleCount > 0;
+  }
+
+  themeFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      activeFilter = filter.dataset.filter;
+      themeFilters.forEach((button) => {
+        const isActive = button === filter;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      updateThemeCards();
+    });
   });
+
+  themeSearch.addEventListener('input', updateThemeCards);
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach((element) => element.classList.add('is-visible'));
+  }
 </script>
   <script src="Travel.js"></script>
   </body>

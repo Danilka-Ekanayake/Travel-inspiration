@@ -3,99 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Have a question about your next trip? Get in touch with the TravelQuest team.">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Travel.css">
-  <title>Contact</title>
+  <title>Contact TravelQuest | Let's talk travel</title>
+</head>
+<body class="contact-body">
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Pictures/Travel logo.png" alt="TravelQuest logo">
+        <span>TravelQuest</span>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Destinations.html">Destinations</a>
+      <a href="Themes.html">Themes</a>
+      <a href="Stories.html">Stories</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Plan a trip.html" class="header-cta">Plan a trip</a>
+      <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle dark mode">🌞</button>
+    </div>
+  </header>
 
-  </head>
-<body>
-  <!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Pictures/Travel logo.png" alt="logo" />
-      <span>TravelQuest</span>
-    </a>
-  </div>
+  <main class="contact-page">
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <div class="contact-hero__image" aria-hidden="true"></div>
+      <div class="contact-hero__content" data-contact-reveal>
+        <span class="contact-kicker"><i class="fa-regular fa-paper-plane"></i> We’re all ears</span>
+        <h1 id="contact-title">Let’s talk about <em>somewhere.</em></h1>
+        <p>Questions, daydreams, a destination you can’t stop thinking about? We’d love to hear what’s on your mind.</p>
+        <a class="contact-button contact-button--light" href="#send-a-note">Send us a note <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <div class="contact-hero__aside" aria-hidden="true"><span>A good trip</span><i class="fa-solid fa-asterisk"></i><span>starts with a hello</span></div>
+      <span class="contact-hero__orbit contact-hero__orbit--one" aria-hidden="true"></span>
+      <span class="contact-hero__orbit contact-hero__orbit--two" aria-hidden="true"></span>
+    </section>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Destinations.html">Destinations</a>
-    <a href="Themes.html">Themes</a>
-    <a href="Stories.html">Stories</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <section class="contact-main" id="send-a-note" aria-labelledby="contact-form-title">
+      <div class="contact-details" data-contact-reveal>
+        <span class="contact-kicker">A real conversation starts here</span>
+        <h2 id="contact-form-title">Tell us what’s <em>on your mind.</em></h2>
+        <p class="contact-details__intro">We’re happy to help you find your way around TravelQuest, talk through a destination, or just hear what you’re dreaming up.</p>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-</header>
+        <a class="contact-detail" href="mailto:hello@wanderguide.com">
+          <span class="contact-detail__icon"><i class="fa-regular fa-envelope"></i></span>
+          <span><span class="contact-detail__label">Send us an email</span><strong>hello@wanderguide.com</strong></span>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-detail__arrow" aria-hidden="true"></i>
+        </a>
+        <a class="contact-detail" href="tel:+12345678900">
+          <span class="contact-detail__icon"><i class="fa-solid fa-phone"></i></span>
+          <span><span class="contact-detail__label">Give us a call</span><strong>+1 (234) 567-8900</strong></span>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-detail__arrow" aria-hidden="true"></i>
+        </a>
+        <div class="contact-detail contact-detail--address">
+          <span class="contact-detail__icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span><span class="contact-detail__label">Find our home base</span><strong>123 Adventure Street<br>San Francisco, CA 94105</strong></span>
+        </div>
 
-  <!-- Hero -->
-  <section class="Contact-hero">
-<h1 data-aos="fade-up">Get in <span>Touch</span></h1>
-<p data-aos="fade-up">Have questions or ideas? Reach out and let’s make your travel dreams a reality</p>
-  </section>
+        <div class="contact-social">
+          <span>Good conversations, wherever you are</span>
+          <div class="contact-social__links">
+            <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
 
-    <footer>
+      <div class="contact-form-wrap" data-contact-reveal>
+        <form class="contact-form" id="contact-form">
+          <span class="contact-kicker">Drop us a line</span>
+          <h2>What can we help with?</h2>
+          <div class="contact-form__row">
+            <label class="contact-field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="How should we address you?" required>
+            </label>
+            <label class="contact-field">
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+          </div>
+          <label class="contact-field">
+            <span>What’s on your mind?</span>
+            <select name="topic" required>
+              <option value="" disabled selected>Pick a topic</option>
+              <option>Help with TravelQuest</option>
+              <option>Destination inspiration</option>
+              <option>Planning a trip</option>
+              <option>Share a travel story</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="contact-field">
+            <span>Your message</span>
+            <textarea name="message" rows="5" placeholder="Tell us a little more..." required></textarea>
+          </label>
+          <button class="contact-button contact-button--submit" type="submit">Prepare your message <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="contact-form__privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your message is prepared in your email app so you can review it before sending.</p>
+          <p class="contact-form__status" id="contact-form-status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-faq" aria-labelledby="contact-faq-title">
+      <div class="contact-faq__heading" data-contact-reveal>
+        <span class="contact-kicker">A few quick answers</span>
+        <h2 id="contact-faq-title">Before you <em>say hello.</em></h2>
+        <p>Wondering where to start? Here are a few helpful signposts.</p>
+      </div>
+      <div class="contact-faq__list" data-contact-reveal>
+        <details>
+          <summary>Can you help me choose where to go?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+          <p>Absolutely. Browse our <a href="Themes.html">travel themes</a> to start with the kind of trip you’re in the mood for, or explore our <a href="Destinations.html">destination guides</a>.</p>
+        </details>
+        <details>
+          <summary>Can I get help planning a trip?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+          <p>Our <a href="Plan a trip.html">trip planning page</a> is a great place to get started. If you have a question along the way, send us a note above.</p>
+        </details>
+        <details>
+          <summary>How do I share a travel story?<i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+          <p>We’d love to hear about it. Choose “Share a travel story” in the contact form and tell us what made your journey special.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact-bottom" data-contact-reveal>
+      <span class="contact-bottom__spark" aria-hidden="true">✳</span>
+      <span class="contact-kicker">The next great story is yours</span>
+      <h2>Not sure where to start? <em>Start anywhere.</em></h2>
+      <p>Explore a place, follow a feeling, or turn the daydream into a plan.</p>
+      <div class="contact-bottom__actions">
+        <a class="contact-button" href="Destinations.html">Explore destinations <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="contact-button contact-button--outline" href="Plan a trip.html">Plan a trip</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="footer-top">
-      <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+      <div class="footer-col">
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Top Destinations</h3>
-        <a href="#">Santorini, Greece</a>
-        <a href="#">Kyoto, Japan</a>
-        <a href="#">Banff, Canada</a>
-        <a href="#">Maldives</a>
-        <a href="#">Patagonia, Chile</a>
-        <a href="#">Bali, Indonesia</a>
+        <a href="Maldives.html">Maldives</a><a href="Japan.html">Kyoto, Japan</a><a href="Canada.html">Banff, Canada</a>
+        <a href="France.html">Paris, France</a><a href="Ausi.html">Australia</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Travel Resources</h3>
-        <a href="#">Travel Guides</a>
-        <a href="#">Packing Lists</a>
-        <a href="#">Safety Tips</a>
-        <a href="#">Budget Planning</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Travel Insurance</a>
+        <a href="Destinations.html">Destination guides</a><a href="Themes.html">Find your travel style</a>
+        <a href="Plan a trip.html">Plan a trip</a><a href="Contact.html">Get in touch</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
-
-        <div class="footer-newsletter" data-aos="fade-up">
-          <h4>Weekly Travel Newsletter</h4>
-          <input type="email" placeholder="Your email">
-          <button>Join</button>
-        </div>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <a href="Contact.html#send-a-note">Send us a note <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
-    </div>
+    <div class="footer-bottom">© 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Contact Us</div>
   </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      
-  });
-</script>
+
+  <script>
+    document.documentElement.classList.add('has-contact-reveal');
+
+    if ('IntersectionObserver' in window) {
+      const contactObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      const contactRevealTargets = document.querySelectorAll('[data-contact-reveal]');
+      contactRevealTargets.forEach((element) => contactObserver.observe(element));
+      window.setTimeout(() => {
+        contactRevealTargets.forEach((element) => element.classList.add('is-visible'));
+      }, 1800);
+    } else {
+      document.querySelectorAll('[data-contact-reveal]').forEach((element) => element.classList.add('is-visible'));
+    }
+
+    document.querySelector('#contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      const subject = encodeURIComponent(`TravelQuest enquiry: ${formData.get('topic')}`);
+      const message = encodeURIComponent(
+        `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nTopic: ${formData.get('topic')}\n\n${formData.get('message')}`
+      );
+      const status = document.querySelector('#contact-form-status');
+
+      status.textContent = 'Your email app should open with your message ready to review. If it doesn’t, email hello@wanderguide.com.';
+      status.hidden = false;
+      window.location.href = `mailto:hello@wanderguide.com?subject=${subject}&body=${message}`;
+    });
+  </script>
   <script src="Travel.js"></script>
-  </body>
-  </html>
+</body>
+</html>

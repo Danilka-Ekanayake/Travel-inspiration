@@ -3,270 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Find your next favorite place. Explore destination inspiration, from island escapes and mountain trails to cities rich with culture.">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Travel.css">
-  <title>Destinations</title>
+  <title>Explore Destinations | TravelQuest</title>
+</head>
+<body class="destinations-body">
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Pictures/Travel logo.png" alt="TravelQuest logo">
+        <span>TravelQuest</span>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Destinations.html">Destinations</a>
+      <a href="Themes.html">Themes</a>
+      <a href="Stories.html">Stories</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Plan a trip.html" class="header-cta">Plan a trip</a>
+      <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle dark mode">🌞</button>
+    </div>
+  </header>
 
-  </head>
-<body>
-  <!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Pictures/Travel logo.png" alt="logo" />
-      <span>TravelQuest</span>
-    </a>
-  </div>
+  <main class="destinations-page">
+    <section class="destinations-hero" aria-labelledby="destinations-title">
+      <div class="destinations-hero__image" aria-hidden="true"></div>
+      <div class="destinations-hero__content" data-destination-reveal>
+        <span class="destinations-kicker"><i class="fa-solid fa-compass"></i> Somewhere is calling</span>
+        <h1 id="destinations-title">Find your <em>somewhere.</em></h1>
+        <p>Wild coastlines, old streets, faraway peaks. Find a place that feels like the beginning of something.</p>
+        <a class="destinations-button destinations-button--light" href="#explore-destinations">Explore the collection <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <div class="destinations-hero__caption"><span>Go where your curiosity takes you</span><span>10 places to begin</span></div>
+      <span class="destinations-hero__orbit destinations-hero__orbit--one" aria-hidden="true"></span>
+      <span class="destinations-hero__orbit destinations-hero__orbit--two" aria-hidden="true"></span>
+    </section>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Destinations.html">Destinations</a>
-    <a href="Themes.html">Themes</a>
-    <a href="Stories.html">Stories</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <section class="destinations-intro" id="explore-destinations" aria-labelledby="destinations-heading">
+      <div data-destination-reveal>
+        <span class="destinations-kicker">A world of possibility</span>
+        <h2 id="destinations-heading">Where will your <em>mind wander?</em></h2>
+      </div>
+      <p data-destination-reveal>From first-time favorites to places that take you by surprise, explore at your own pace and see what stays with you.</p>
+    </section>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-</header>
+    <section class="destinations-explorer" aria-label="Browse destinations">
+      <div class="destinations-controls" data-destination-reveal>
+        <div class="destinations-filters" role="group" aria-label="Filter destinations by experience">
+          <button type="button" class="destination-filter is-active" data-filter="all" aria-pressed="true">All places <span>10</span></button>
+          <button type="button" class="destination-filter" data-filter="coast" aria-pressed="false">Coast &amp; islands</button>
+          <button type="button" class="destination-filter" data-filter="nature" aria-pressed="false">Nature</button>
+          <button type="button" class="destination-filter" data-filter="culture" aria-pressed="false">Culture</button>
+          <button type="button" class="destination-filter" data-filter="city" aria-pressed="false">City life</button>
+        </div>
+        <label class="destinations-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Search destinations</span>
+          <input type="search" id="destination-search" placeholder="Search a place..." autocomplete="off">
+        </label>
+      </div>
 
-  <!-- Hero -->
-  <section class="Destinations-hero">
-    <h1 data-aos="fade-up">Adventure Awaits: <br> <span>Explore the World’s Best Spots</span></h1>
-    <p data-aos="fade-up">Explore destinations curated for your dream journey</p>
-  </section>
+      <p class="destinations-count" aria-live="polite"><span id="destination-result-count">10</span> places to spark your next adventure</p>
 
-  <section>
-  <h2 data-aos="fade-up">All Destinations you can visit</h2>
-  <div class="grid" data-aos="fade-up">
-  
-   <div class="card">
-  <div class="card-img">
-    <img src="https://ignitetravelsolution.com/wp-content/uploads/2025/01/Sri-Lanka-World-Heritage.jpg" alt="Sri Lanka">
-    <div class="overlay"></div>
-    <span class="tag">Nature Trails & Historical</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.7</span> <!-- top-right rating -->
-  </div>
-  <h3>Sigiriya rock, Sri Lanka</h3>
-  <p>UNESCO World Heritage Site.
-     Ancient rock fortress with frescoes and panoramic views.
-     Most visited historical/cultural site.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-  <a href="Sri lanka.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+      <div class="destinations-grid">
+        <article class="destination-card" data-category="culture nature" data-search="sri lanka sigiriya lion rock heritage history ancient jungle asia">
+          <a class="destination-card__image" href="Sri lanka.html" aria-label="Explore Sigiriya and Sri Lanka">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Ancient stone architecture emerging from lush greenery" loading="lazy">
+            <span class="destination-card__category">Culture &amp; nature</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Sri Lanka</span><h3>Sigiriya, the Lion Rock</h3><p>Climb to an ancient hilltop fortress, wander through tropical gardens, and take in the wide-open views.</p><a class="destination-card__link" href="Sri lanka.html">Discover Sri Lanka <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
+        <article class="destination-card" data-category="coast" data-search="maldives malé beach island turquoise ocean reef resort south asia">
+          <a class="destination-card__image" href="Maldives.html" aria-label="Explore the Maldives">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Palm-lined tropical islands surrounded by turquoise water" loading="lazy">
+            <span class="destination-card__category">Coast &amp; islands</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Maldives</span><h3>Malé &amp; the islands</h3><p>Clear-water lagoons, bright coral reefs, and laid-back island days make it easy to slow down.</p><a class="destination-card__link" href="Maldives.html">Find your island escape <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
-<div class="card">
-  <div class="card-img">
-    <img src="https://enqafm7df2v.exactdn.com/wp-content/uploads/2024/12/Landscape-resizer-for-socials-posting-2024-12-10T093800.227.jpg?strip=all&lossy=1&ssl=1" alt="Maldives">
-    <div class="overlay"></div>
-    <span class="tag">Beach</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>Malé, Maldives</h3>
-  <p>Capital city, small but full of culture.
-     Visit: Maldives Islamic Centre, local markets, Old Friday Mosque.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="Maldives.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+        <article class="destination-card" data-category="nature" data-search="switzerland zermatt matterhorn swiss alps mountain hiking skiing alpine">
+          <a class="destination-card__image" href="Swiss alps.html" aria-label="Explore the Swiss Alps">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Snow-capped peaks in the Swiss Alps" loading="lazy">
+            <span class="destination-card__category">Mountain air</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Switzerland</span><h3>Zermatt &amp; the Matterhorn</h3><p>Mountain trails, alpine railways, and the unmistakable silhouette of the Matterhorn.</p><a class="destination-card__link" href="Swiss alps.html">Meet the mountains <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
+        <article class="destination-card" data-category="city culture" data-search="new york usa united states city urban manhattan broadway central park">
+          <a class="destination-card__image" href="USA.html" aria-label="Explore New York City">
+            <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="New York City skyline rising above the streets" loading="lazy">
+            <span class="destination-card__category">City life</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> New York, USA</span><h3>New York, block by block</h3><p>Find your own New York among famous skyline views, neighborhood cafés, and late-night lights.</p><a class="destination-card__link" href="USA.html">Feel the city <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
-<div class="card">
-  <div class="card-img">
-    <img src="https://www.erikastravelventures.com/wp-content/uploads/2018/10/IMG_6858-e1540290382435.jpg" alt="Swiss Alps">
-    <div class="overlay"></div>
-    <span class="tag">Mountains</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.3</span> <!-- top-right rating -->
-  </div>
-  <h3>Zermatt & Matterhorn, Switzerland</h3>
-  <p>Iconic mountain, famous for skiing, mountaineering, and photography.
-     Car-free village with luxury hotels and chalets.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="Swiss alps.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+        <article class="destination-card" data-category="culture city" data-search="france paris eiffel tower art romance culture city cafe">
+          <a class="destination-card__image" href="France.html" aria-label="Explore Paris, France">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Paris rooftops and the Eiffel Tower at sunset" loading="lazy">
+            <span class="destination-card__category">Art &amp; culture</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Paris, France</span><h3>Paris, at your own pace</h3><p>Take in the architecture, linger over a café, and let the next lovely street find you.</p><a class="destination-card__link" href="France.html">Wander through Paris <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
- <div class="card">
-  <div class="card-img">
-    <img src="https://blog.viajemos.com/wp-content/uploads/2023/06/%C2%BFQue-hacer-un-dia-en-New-York-3.jpg" alt="New york">
-    <div class="overlay"></div>
-    <span class="tag">City life</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.8</span> <!-- top-right rating -->
-  </div>
-  <h3>New York City, New York</h3>
-  <p>Times Square, Statue of Liberty, Central Park, Broadway.
-     Culture, shopping, iconic city life.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="USA.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+        <article class="destination-card" data-category="culture city nature" data-search="japan tokyo kyoto temples food city culture gardens asia">
+          <a class="destination-card__image" href="Japan.html" aria-label="Explore Japan">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Traditional Kyoto streets framed by autumn leaves" loading="lazy">
+            <span class="destination-card__category">City &amp; tradition</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Japan</span><h3>Japan, many worlds in one</h3><p>Move from lively city streets to quiet gardens, where every turn reveals a new side of Japan.</p><a class="destination-card__link" href="Japan.html">Explore Japan <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
+        <article class="destination-card" data-category="culture city" data-search="united kingdom uk london england history architecture city museums">
+          <a class="destination-card__image" href="UK.html" aria-label="Explore the United Kingdom">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="London streets and historic architecture" loading="lazy">
+            <span class="destination-card__category">History &amp; city life</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> United Kingdom</span><h3>London &amp; beyond</h3><p>Discover landmark streets, neighborhood markets, historic towns, and the green countryside in between.</p><a class="destination-card__link" href="UK.html">Explore the UK <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
-<div class="card">
-  <div class="card-img">
-    <img src="https://s3.amazonaws.com/com.vertoe.blog/blog/wp-content/uploads/2021/06/16032615/pexels-mikhail-nilov-8430474.jpg" alt="France">
-    <div class="overlay"></div>
-    <span class="tag">Romance & cultural</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>Paris, France</h3>
-  <p>Eiffel Tower, Louvre Museum, Notre-Dame, Champs-Élysées.
-     City of culture, art, fashion, and romance.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="France.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+        <article class="destination-card" data-category="coast nature city" data-search="australia sydney coast beach ocean road trip wildlife city">
+          <a class="destination-card__image" href="Ausi.html" aria-label="Explore Australia">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Sydney Harbour and the Australian coastline" loading="lazy">
+            <span class="destination-card__category">Coast &amp; outdoors</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Australia</span><h3>Australia, wide open</h3><p>Pair a sunlit city with ocean air, open roads, and vast landscapes worth taking your time for.</p><a class="destination-card__link" href="Ausi.html">Take the coast road <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
+        <article class="destination-card" data-category="nature city" data-search="canada banff toronto mountains lakes forest outdoors city north america">
+          <a class="destination-card__image" href="Canada.html" aria-label="Explore Canada">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Mountain lake surrounded by Canada's forested peaks" loading="lazy">
+            <span class="destination-card__category">Wild landscapes</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> Canada</span><h3>Canada, naturally</h3><p>Glacial lakes, forest trails, and welcoming cities make room for a different kind of adventure.</p><a class="destination-card__link" href="Canada.html">Discover Canada <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
 
-<div class="card">
-  <div class="card-img">
-    <img src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" alt="Japan">
-    <div class="overlay"></div>
-    <span class="tag">City & Nature</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>Tokyo, Japan</h3>
-  <p>Modern city: Shibuya Crossing, Tokyo Tower, Akihabara, shopping districts.
-     Pop culture, technology, nightlife, and city experiences.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="Japan.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+        <article class="destination-card" data-category="city culture coast" data-search="uae united arab emirates dubai abu dhabi desert architecture city beach">
+          <a class="destination-card__image" href="UAE.html" aria-label="Explore the United Arab Emirates">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Dubai skyline rising from the desert at golden hour" loading="lazy">
+            <span class="destination-card__category">Desert &amp; skyline</span><span class="destination-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="destination-card__body"><span class="destination-card__place"><i class="fa-solid fa-location-dot"></i> United Arab Emirates</span><h3>Dubai &amp; the Emirates</h3><p>Explore striking modern architecture, old souks, warm desert horizons, and the Arabian Gulf.</p><a class="destination-card__link" href="UAE.html">Explore the Emirates <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+      </div>
+      <p class="destinations-empty" id="destinations-empty" hidden>No places match that search. Try another destination or experience.</p>
+    </section>
 
-   <div class="card">
-  <div class="card-img">
-    <img src="https://guidelinestobritain.com/wp-content/uploads/2019/01/London-skyline-with-Big-Ben-and-environs-including-the-London-Eye-Portcullis-House-Parliament-Square-and-St-Margarets-Church.jpg" alt="Sri Lanka">
-    <div class="overlay"></div>
-    <span class="tag">Nature Trails & Historical</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.7</span> <!-- top-right rating -->
-  </div>
-  <h3>United Kingdom</h3>
-  <p>UNESCO World Heritage Site.
-     Ancient rock fortress with frescoes and panoramic views.
-     Most visited historical/cultural site.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-  <a href="UK.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
+    <section class="destinations-invite" data-destination-reveal>
+      <span class="destinations-invite__spark" aria-hidden="true">✳</span>
+      <span class="destinations-kicker">Pick a place. Follow a feeling.</span>
+      <h2>Your next favorite place is <em>out there.</em></h2>
+      <p>Have a destination in mind? Start sketching out the kind of journey you’d love to take.</p>
+      <a class="destinations-button" href="Plan a trip.html">Let’s plan your trip <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+  </main>
 
-<div class="card">
-  <div class="card-img">
-    <img src="https://www.shutterstock.com/image-photo/sydney-australia-october-20-2023-600nw-2465212583.jpg" alt="Japan">
-    <div class="overlay"></div>
-    <span class="tag">City & Nature</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>Australia</h3>
-  <p>Modern city: Shibuya Crossing, Tokyo Tower, Akihabara, shopping districts.
-     Pop culture, technology, nightlife, and city experiences.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="Ausi.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-img">
-    <img src="https://www.shutterstock.com/image-photo/toronto-ontario-canada-cityscape-autumn-600nw-2529873209.jpg" alt="Canada">
-    <div class="overlay"></div>
-    <span class="tag">City & Nature</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>Canada</h3>
-  <p>Modern city: Shibuya Crossing, Tokyo Tower, Akihabara, shopping districts.
-     Pop culture, technology, nightlife, and city experiences.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="Canada.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-img">
-    <img src="https://www.planetware.com/wpimages/2019/12/united-arab-emirates-in-pictures-beautiful-places-to-photograph-the-palm-jumeirah.jpg" alt="UAE">
-    <div class="overlay"></div>
-    <span class="tag">City & Nature</span> <!-- top-left tag -->
-    <span class="rating">⭐ 4.5</span> <!-- top-right rating -->
-  </div>
-  <h3>UAE</h3>
-  <p>Modern city: Shibuya Crossing, Tokyo Tower, Akihabara, shopping districts.
-     Pop culture, technology, nightlife, and city experiences.</p>
-  <div class="card-footer">
-    <span class="price">Starting from $200</span>
-    <a href="UAE.html"><button class="view-btn">View More</button></a> 
-  </div>
-</div>
-  </div>
-</section>
-    <footer>
+  <footer>
     <div class="footer-top">
-      <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+      <div class="footer-col">
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
-        <h3>Top Destinations</h3>
-        <a href="#">Santorini, Greece</a>
-        <a href="#">Kyoto, Japan</a>
-        <a href="#">Banff, Canada</a>
-        <a href="#">Maldives</a>
-        <a href="#">Patagonia, Chile</a>
-        <a href="#">Bali, Indonesia</a>
+      <div class="footer-col">
+        <h3>Popular Places</h3>
+        <a href="Maldives.html">Maldives</a><a href="Japan.html">Japan</a><a href="Canada.html">Canada</a>
+        <a href="France.html">France</a><a href="Sri lanka.html">Sri Lanka</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Travel Resources</h3>
-        <a href="#">Travel Guides</a>
-        <a href="#">Packing Lists</a>
-        <a href="#">Safety Tips</a>
-        <a href="#">Budget Planning</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Travel Insurance</a>
+        <a href="Themes.html">Find your travel style</a><a href="Stories.html">Travel stories</a>
+        <a href="Plan a trip.html">Plan a trip</a><a href="Contact.html">Get in touch</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
-
-        <div class="footer-newsletter" data-aos="fade-up">
-          <h4>Weekly Travel Newsletter</h4>
-          <input type="email" placeholder="Your email">
-          <button>Join</button>
-        </div>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <a href="Contact.html">Send us a note <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
-    </div>
+    <div class="footer-bottom">© 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Contact Us</div>
   </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      // Animate only once per scroll
-  });
-</script>
+
+  <script>
+    document.documentElement.classList.add('has-destination-reveal');
+
+    const destinationCards = Array.from(document.querySelectorAll('.destination-card'));
+    const destinationFilters = document.querySelectorAll('.destination-filter');
+    const destinationSearch = document.querySelector('#destination-search');
+    const destinationCount = document.querySelector('#destination-result-count');
+    const destinationEmpty = document.querySelector('#destinations-empty');
+    let activeDestinationFilter = 'all';
+
+    function updateDestinations() {
+      const query = destinationSearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      destinationCards.forEach((card) => {
+        const categories = card.dataset.category.split(' ');
+        const matchesFilter = activeDestinationFilter === 'all' || categories.includes(activeDestinationFilter);
+        const matchesSearch = `${card.dataset.search} ${card.textContent}`.toLowerCase().includes(query);
+        const isVisible = matchesFilter && matchesSearch;
+
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      destinationCount.textContent = visibleCount;
+      destinationEmpty.hidden = visibleCount > 0;
+    }
+
+    destinationFilters.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        activeDestinationFilter = filter.dataset.filter;
+        destinationFilters.forEach((button) => {
+          const isActive = button === filter;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-pressed', String(isActive));
+        });
+        updateDestinations();
+      });
+    });
+
+    destinationSearch.addEventListener('input', updateDestinations);
+
+    if ('IntersectionObserver' in window) {
+      const destinationObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.destination-card').forEach((card) => card.setAttribute('data-destination-reveal', ''));
+      const revealTargets = document.querySelectorAll('[data-destination-reveal]');
+      revealTargets.forEach((element) => destinationObserver.observe(element));
+      window.setTimeout(() => {
+        revealTargets.forEach((element) => element.classList.add('is-visible'));
+      }, 1800);
+    } else {
+      document.querySelectorAll('[data-destination-reveal]').forEach((element) => element.classList.add('is-visible'));
+    }
+  </script>
   <script src="Travel.js"></script>
-  </body>
-  </html>
+</body>
+</html>

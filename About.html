@@ -3,99 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Get to know TravelQuest: thoughtful travel inspiration for finding your own way into the world.">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Travel.css">
-  <title>About us</title>
+  <title>About TravelQuest | Travel with feeling</title>
+</head>
+<body class="about-body">
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Pictures/Travel logo.png" alt="TravelQuest logo">
+        <span>TravelQuest</span>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Destinations.html">Destinations</a>
+      <a href="Themes.html">Themes</a>
+      <a href="Stories.html">Stories</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Plan a trip.html" class="header-cta">Plan a trip</a>
+      <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle dark mode">🌞</button>
+    </div>
+  </header>
 
-  </head>
-<body>
-  <!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Pictures/Travel logo.png" alt="logo" />
-      <span>TravelQuest</span>
-    </a>
-  </div>
+  <main class="about-page">
+    <section class="about-hero-new" aria-labelledby="about-title">
+      <div class="about-hero-new__image" aria-hidden="true"></div>
+      <div class="about-hero-new__content" data-about-reveal>
+        <span class="about-kicker"><i class="fa-solid fa-compass"></i> A little about us</span>
+        <h1 id="about-title">Made for the <em>way you wander.</em></h1>
+        <p>We believe the best journeys aren’t just about where you go. They’re about what you notice, who you meet, and how the world makes you feel.</p>
+        <a class="about-button about-button--light" href="#our-story">Get to know us <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <div class="about-hero-new__note"><span>Go with wonder</span><i class="fa-solid fa-asterisk"></i><span>Come back with a story</span></div>
+      <span class="about-hero-new__orbit about-hero-new__orbit--one" aria-hidden="true"></span>
+      <span class="about-hero-new__orbit about-hero-new__orbit--two" aria-hidden="true"></span>
+    </section>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Destinations.html">Destinations</a>
-    <a href="Themes.html">Themes</a>
-    <a href="Stories.html">Stories</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <section class="about-manifesto" id="our-story" aria-labelledby="manifesto-title">
+      <div class="about-manifesto__art" data-about-reveal>
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Quiet mountain lake reflecting the landscape at sunrise" loading="lazy">
+        <span class="about-manifesto__caption"><i class="fa-solid fa-location-dot"></i> A world of possibility</span>
+        <span class="about-manifesto__seal" aria-hidden="true">wonder<br><i>looks good</i><br>on you</span>
+      </div>
+      <div class="about-manifesto__copy" data-about-reveal>
+        <span class="about-kicker">Our point of view</span>
+        <h2 id="manifesto-title">Less checklist.<br><em>More feeling.</em></h2>
+        <p>Travel can open a door in you. A new landscape, an unexpected conversation, the taste of something you can’t pronounce yet. That’s the part we’re here for.</p>
+        <p>TravelQuest is a place to find inspiration, explore destinations, and get a little closer to the trip that feels like yours. No one-size-fits-all itineraries. Just a thoughtful starting point for wherever curiosity takes you.</p>
+        <a class="about-text-link" href="Destinations.html">Find somewhere to begin <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-</header>
+    <section class="about-values" aria-labelledby="values-title">
+      <div class="about-section-heading" data-about-reveal>
+        <span class="about-kicker">What guides us</span>
+        <h2 id="values-title">A better kind of <em>travel inspiration.</em></h2>
+        <p>Good journeys are personal. So is the way we help you find yours.</p>
+      </div>
+      <div class="about-values__grid">
+        <article class="about-value" data-about-reveal>
+          <span class="about-value__number">01</span>
+          <span class="about-value__icon"><i class="fa-solid fa-heart"></i></span>
+          <h3>Follow what moves you</h3>
+          <p>Start with a feeling, a favorite kind of morning, or a place you can’t stop thinking about. There’s no wrong way in.</p>
+        </article>
+        <article class="about-value" data-about-reveal>
+          <span class="about-value__number">02</span>
+          <span class="about-value__icon"><i class="fa-solid fa-earth-americas"></i></span>
+          <h3>Stay open to the world</h3>
+          <p>Look beyond the familiar. Be a good guest, meet a place on its own terms, and leave room for the unexpected.</p>
+        </article>
+        <article class="about-value" data-about-reveal>
+          <span class="about-value__number">03</span>
+          <span class="about-value__icon"><i class="fa-solid fa-feather-pointed"></i></span>
+          <h3>Make space to wander</h3>
+          <p>A little planning can make room for a lot of possibility. Keep the good tips, skip the pressure to do it all.</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- Hero -->
-  <section class="About-hero">
-<h1 data-aos="fade-up">Meet the <br> <span>TravelQuest Team</span></h1>
-<p data-aos="fade-up">Passionate explorers dedicated to bringing you the world’s best travel experiences</p>
-  </section>
+    <section class="about-bridge" aria-label="Travel at your own pace">
+      <div class="about-bridge__image" aria-hidden="true"></div>
+      <div class="about-bridge__copy" data-about-reveal>
+        <span class="about-kicker"><i class="fa-solid fa-sun"></i> Our kind of travel</span>
+        <h2>Go a little further.<br><em>Feel a little more.</em></h2>
+        <p>Take the scenic route. Stay for the second cup of tea. Let a place surprise you. The moments in between are part of the journey, too.</p>
+        <a class="about-button about-button--light" href="Stories.html">Read travel stories <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
 
-    <footer>
+    <section class="about-how" aria-labelledby="how-title">
+      <div class="about-how__heading" data-about-reveal>
+        <span class="about-kicker">From daydream to departure</span>
+        <h2 id="how-title">Your next journey starts <em>where you are.</em></h2>
+        <p>No complicated formula. Just a few lovely ways to get going.</p>
+      </div>
+      <div class="about-how__steps">
+        <article class="about-step" data-about-reveal>
+          <span class="about-step__number">01 <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="about-step__icon"><i class="fa-solid fa-binoculars"></i></span>
+          <h3>Get curious</h3>
+          <p>Browse a destination, pick a travel mood, or follow a story that catches your eye.</p>
+          <a href="Themes.html">Explore travel themes <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="about-step" data-about-reveal>
+          <span class="about-step__number">02 <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="about-step__icon"><i class="fa-solid fa-map"></i></span>
+          <h3>Find your fit</h3>
+          <p>Gather ideas, save what feels right, and shape a trip around your kind of adventure.</p>
+          <a href="Destinations.html">Explore destinations <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="about-step" data-about-reveal>
+          <span class="about-step__number">03 <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="about-step__icon"><i class="fa-solid fa-paper-plane"></i></span>
+          <h3>Make it yours</h3>
+          <p>When inspiration turns into a plan, take the next step at a pace that feels good.</p>
+          <a href="Plan a trip.html">Start planning <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-invite" data-about-reveal>
+      <span class="about-invite__spark" aria-hidden="true">✳</span>
+      <span class="about-kicker">The world is waiting</span>
+      <h2>Where will <em>curiosity take you?</em></h2>
+      <p>Find a new favorite place, start with a story, or make a plan that feels like your own.</p>
+      <div class="about-invite__actions">
+        <a class="about-button" href="Plan a trip.html">Plan your next trip <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="about-button about-button--outline" href="Stories.html">Find some inspiration</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="footer-top">
-      <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+      <div class="footer-col">
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Top Destinations</h3>
-        <a href="#">Santorini, Greece</a>
-        <a href="#">Kyoto, Japan</a>
-        <a href="#">Banff, Canada</a>
-        <a href="#">Maldives</a>
-        <a href="#">Patagonia, Chile</a>
-        <a href="#">Bali, Indonesia</a>
+        <a href="Maldives.html">Maldives</a><a href="Japan.html">Kyoto, Japan</a><a href="Canada.html">Banff, Canada</a>
+        <a href="France.html">Paris, France</a><a href="Ausi.html">Australia</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Travel Resources</h3>
-        <a href="#">Travel Guides</a>
-        <a href="#">Packing Lists</a>
-        <a href="#">Safety Tips</a>
-        <a href="#">Budget Planning</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Travel Insurance</a>
+        <a href="Destinations.html">Destination guides</a><a href="Themes.html">Find your travel style</a>
+        <a href="Plan a trip.html">Plan a trip</a><a href="Contact.html">Get in touch</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
-
-        <div class="footer-newsletter" data-aos="fade-up">
-          <h4>Weekly Travel Newsletter</h4>
-          <input type="email" placeholder="Your email">
-          <button>Join</button>
-        </div>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <a href="Contact.html">Send us a note <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
-    </div>
+    <div class="footer-bottom">© 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Contact Us</div>
   </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      // Animate only once per scroll
-  });
-</script>
+
+  <script>
+    document.documentElement.classList.add('has-about-reveal');
+
+    if ('IntersectionObserver' in window) {
+      const aboutObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      const aboutRevealTargets = document.querySelectorAll('[data-about-reveal]');
+      aboutRevealTargets.forEach((element) => aboutObserver.observe(element));
+      window.setTimeout(() => {
+        aboutRevealTargets.forEach((element) => element.classList.add('is-visible'));
+      }, 1800);
+    } else {
+      document.querySelectorAll('[data-about-reveal]').forEach((element) => element.classList.add('is-visible'));
+    }
+  </script>
   <script src="Travel.js"></script>
-  </body>
-  </html>
+</body>
+</html>

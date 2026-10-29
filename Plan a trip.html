@@ -3,100 +3,418 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Shape a trip that feels like yours. Choose a destination, travel style and pace to create a flexible day-by-day starting itinerary with TravelQuest.">
+  <meta name="theme-color" content="#193732">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Travel.css">
-  <title>Plan your trip</title>
+  <title>Plan a trip | TravelQuest</title>
+</head>
+<body class="trip-body">
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Pictures/Travel logo.png" alt="TravelQuest logo">
+        <span>TravelQuest</span>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Destinations.html">Destinations</a>
+      <a href="Themes.html">Themes</a>
+      <a href="Stories.html">Stories</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Plan a trip.html" class="header-cta" aria-current="page">Plan a trip</a>
+      <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle dark mode">🌞</button>
+    </div>
+  </header>
 
-  </head>
-<body>
-  <!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Pictures/Travel logo.png" alt="logo" />
-      <span>TravelQuest</span>
-    </a>
-  </div>
+  <main class="trip-page">
+    <section class="trip-hero" aria-labelledby="trip-hero-title">
+      <div class="trip-hero__content">
+        <span class="trip-kicker"><i class="fa-regular fa-compass" aria-hidden="true"></i> Your next chapter starts here</span>
+        <h1 id="trip-hero-title">The world is waiting. <em>Let’s make it yours.</em></h1>
+        <p>Big adventure or slow escape, the best trips start with a feeling. Tell us what yours looks like and make a plan that leaves room for the unexpected.</p>
+        <a class="trip-button" href="#trip-builder">Start planning <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        <p class="trip-hero__note"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> A little inspiration, a lot of possibility. No booking required.</p>
+      </div>
+      <div class="trip-hero__stamp" aria-hidden="true">
+        <i class="fa-regular fa-compass"></i>
+        <span>Make room<br>for wonder</span>
+      </div>
+    </section>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Destinations.html">Destinations</a>
-    <a href="Themes.html">Themes</a>
-    <a href="Stories.html">Stories</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <section class="trip-how" aria-labelledby="trip-how-title">
+      <div class="trip-section-heading" data-trip-reveal>
+        <span class="trip-kicker">Simple by nature</span>
+        <h2 id="trip-how-title">A good trip begins <em>with you.</em></h2>
+        <p>Forget the one-size-fits-all checklist. Start with what you love, then build a journey that feels like it could only be yours.</p>
+      </div>
+      <div class="trip-steps">
+        <article class="trip-step" data-trip-reveal>
+          <span class="trip-step__number">01</span>
+          <h3>Pick your somewhere</h3>
+          <p>Choose a place you’ve been dreaming about—or leave the door open to a surprise.</p>
+        </article>
+        <article class="trip-step" data-trip-reveal>
+          <span class="trip-step__number">02</span>
+          <h3>Set your own pace</h3>
+          <p>Tell us what you’re drawn to, how long you have and who’s coming along.</p>
+        </article>
+        <article class="trip-step" data-trip-reveal>
+          <span class="trip-step__number">03</span>
+          <h3>Let the ideas flow</h3>
+          <p>Get a flexible day-by-day outline to spark your research and make your own.</p>
+        </article>
+      </div>
+    </section>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-</header>
+    <section class="trip-planner" id="trip-builder" aria-labelledby="trip-planner-title">
+      <div class="trip-planner__inner">
+        <div class="trip-section-heading" data-trip-reveal>
+          <span class="trip-kicker">Your trip, your rules</span>
+          <h2 id="trip-planner-title">Let’s make a little <em>magic.</em></h2>
+          <p>Share a few details and we’ll put together a flexible itinerary starter—right here, right now.</p>
+        </div>
 
+        <div class="trip-planner__grid">
+          <form class="trip-form" id="trip-form">
+            <div class="trip-form__intro">
+              <div>
+                <span class="trip-kicker">First, the fun part</span>
+                <h3>What are you dreaming of?</h3>
+              </div>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </div>
 
-<section class="Plan-hero">
-    <h1 data-aos="fade-up">Design your perfect journey <br> <span>one step at a time</span></h1>
-    <p data-aos="fade-up">Your trip, your way — let’s start planning</p>
-  </section>
+            <div class="trip-form__fields">
+              <div class="trip-field">
+                <label for="trip-destination">Where to?</label>
+                <select id="trip-destination" name="destination" required>
+                  <option value="" selected disabled>Choose your somewhere</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="France">France</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="Surprise me">Surprise me</option>
+                </select>
+              </div>
+              <div class="trip-field">
+                <label for="trip-date">When are you thinking?</label>
+                <input id="trip-date" name="date" type="date">
+              </div>
+              <div class="trip-field">
+                <label for="trip-duration">How long have you got?</label>
+                <select id="trip-duration" name="duration">
+                  <option value="3">A long weekend · 3 days</option>
+                  <option value="5">A little escape · 5 days</option>
+                  <option value="7" selected>A full week · 7 days</option>
+                  <option value="10">Room to roam · 10 days</option>
+                </select>
+              </div>
+              <div class="trip-field">
+                <label for="trip-travelers">Who’s coming along?</label>
+                <input id="trip-travelers" name="travelers" type="number" min="1" max="12" value="2" required>
+              </div>
+              <div class="trip-field trip-field--wide">
+                <label for="trip-budget">What feels right for your budget?</label>
+                <select id="trip-budget" name="budget">
+                  <option value="thoughtful">Thoughtful &amp; flexible</option>
+                  <option value="comfortable" selected>Comfortable &amp; balanced</option>
+                  <option value="treat">A little treat-yourself</option>
+                </select>
+              </div>
+            </div>
 
+            <fieldset>
+              <legend>What kind of trip sounds like you?</legend>
+              <div class="trip-style-options">
+                <label class="trip-style">
+                  <input type="radio" name="style" value="Easygoing" checked>
+                  <span><i class="fa-solid fa-mug-hot" aria-hidden="true"></i>Easygoing</span>
+                </label>
+                <label class="trip-style">
+                  <input type="radio" name="style" value="Culture curious">
+                  <span><i class="fa-solid fa-landmark" aria-hidden="true"></i>Culture curious</span>
+                </label>
+                <label class="trip-style">
+                  <input type="radio" name="style" value="Outdoorsy">
+                  <span><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>Outdoorsy</span>
+                </label>
+                <label class="trip-style">
+                  <input type="radio" name="style" value="Food first">
+                  <span><i class="fa-solid fa-utensils" aria-hidden="true"></i>Food first</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Pick a few things you love</legend>
+              <div class="trip-interest-options">
+                <label class="trip-interest">
+                  <input type="checkbox" name="interests" value="culture" checked>
+                  <span><i class="fa-solid fa-landmark" aria-hidden="true"></i>Culture</span>
+                </label>
+                <label class="trip-interest">
+                  <input type="checkbox" name="interests" value="food" checked>
+                  <span><i class="fa-solid fa-bowl-food" aria-hidden="true"></i>Local food</span>
+                </label>
+                <label class="trip-interest">
+                  <input type="checkbox" name="interests" value="nature">
+                  <span><i class="fa-solid fa-leaf" aria-hidden="true"></i>Nature</span>
+                </label>
+                <label class="trip-interest">
+                  <input type="checkbox" name="interests" value="slow">
+                  <span><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i>Slow moments</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="trip-form__actions">
+              <button class="trip-button" type="submit">Build my trip outline <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              <button class="trip-reset" type="reset">Start over</button>
+            </div>
+          </form>
+
+          <aside class="trip-planner-card" aria-label="Travel inspiration">
+            <span class="trip-planner-card__badge"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Made for your kind of magic</span>
+            <div class="trip-planner-card__content">
+              <span>A note to future you</span>
+              <h3>Leave a little room for lost afternoons.</h3>
+              <p>The best memories don’t always make it onto the itinerary.</p>
+            </div>
+          </aside>
+        </div>
+
+        <section class="trip-result" id="trip-result" aria-labelledby="trip-result-title" aria-live="polite" hidden>
+          <div class="trip-result__header">
+            <div>
+              <span class="trip-kicker">A first draft for your daydream</span>
+              <h3 id="trip-result-title"></h3>
+              <p id="trip-result-summary"></p>
+            </div>
+            <span class="trip-result__icon" aria-hidden="true"><i class="fa-regular fa-map"></i></span>
+          </div>
+          <div class="trip-result__facts" id="trip-result-facts"></div>
+          <div class="trip-itinerary" id="trip-itinerary"></div>
+          <p class="trip-result__note">This is an inspiration outline, not a reservation or live travel advice. Check local opening times, transport and entry requirements as you make your plans.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="trip-inspiration" aria-labelledby="trip-inspiration-title">
+      <div class="trip-inspiration__copy" data-trip-reveal>
+        <span class="trip-kicker">A spark for your map</span>
+        <h2 id="trip-inspiration-title">Not sure where? <em>Follow the feeling.</em></h2>
+        <p>Somewhere with a view that makes you pause. A table you’ll remember long after dessert. A different rhythm for a little while. Start exploring and see what calls you.</p>
+        <div class="trip-inspiration__links">
+          <a href="Destinations.html">Browse destinations <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="Themes.html">Find your travel style <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="Stories.html">Read travel stories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="trip-inspiration__image" role="img" aria-label="A colorful coastal village nestled beside the sea">
+        <span>Take the scenic route.</span>
+      </div>
+    </section>
+
+    <section class="trip-bottom" aria-labelledby="trip-bottom-title">
+      <span class="trip-kicker"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Wherever you’re headed</span>
+      <h2 id="trip-bottom-title">The first step is just <em>saying yes.</em></h2>
+      <p>Have a question or want a little help finding your somewhere? We’re always happy to talk travel.</p>
+      <a class="trip-button" href="Contact.html#send-a-note">Let’s talk about it <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-top">
-      <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+      <div class="footer-col">
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Top Destinations</h3>
-        <a href="#">Santorini, Greece</a>
-        <a href="#">Kyoto, Japan</a>
-        <a href="#">Banff, Canada</a>
-        <a href="#">Maldives</a>
-        <a href="#">Patagonia, Chile</a>
-        <a href="#">Bali, Indonesia</a>
+        <a href="Maldives.html">Maldives</a>
+        <a href="Japan.html">Kyoto, Japan</a>
+        <a href="Canada.html">Banff, Canada</a>
+        <a href="France.html">Paris, France</a>
+        <a href="Ausi.html">Australia</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Travel Resources</h3>
-        <a href="#">Travel Guides</a>
-        <a href="#">Packing Lists</a>
-        <a href="#">Safety Tips</a>
-        <a href="#">Budget Planning</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Travel Insurance</a>
+        <a href="Destinations.html">Destination guides</a>
+        <a href="Themes.html">Find your travel style</a>
+        <a href="Plan a trip.html">Plan a trip</a>
+        <a href="Contact.html">Get in touch</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
-
-        <div class="footer-newsletter">
-          <h4>Weekly Travel Newsletter</h4>
-          <input type="email" placeholder="Your email">
-          <button>Join</button>
-        </div>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <a href="Contact.html#send-a-note">Send us a note <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
-    </div>
+    <div class="footer-bottom">© 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Contact Us</div>
   </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      // Animate only once per scroll
-  });
-</script>
+
+  <script>
+    document.documentElement.classList.add('has-trip-reveal');
+
+    const revealTargets = document.querySelectorAll('[data-trip-reveal]');
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealTargets.forEach((element) => revealObserver.observe(element));
+      window.setTimeout(() => {
+        revealTargets.forEach((element) => element.classList.add('is-visible'));
+      }, 1800);
+    } else {
+      revealTargets.forEach((element) => element.classList.add('is-visible'));
+    }
+
+    const tripForm = document.querySelector('#trip-form');
+    const tripResult = document.querySelector('#trip-result');
+    const tripResultTitle = document.querySelector('#trip-result-title');
+    const tripResultSummary = document.querySelector('#trip-result-summary');
+    const tripResultFacts = document.querySelector('#trip-result-facts');
+    const tripItinerary = document.querySelector('#trip-itinerary');
+    const dateInput = document.querySelector('#trip-date');
+    const today = new Date();
+    dateInput.min = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+    const interestIdeas = {
+      culture: {
+        title: 'Find a story in the streets',
+        copy: 'Choose one neighborhood, landmark or gallery to explore slowly, then leave time to wander beyond the guidebook.'
+      },
+      food: {
+        title: 'Follow the local flavors',
+        copy: 'Make room for a market, a long lunch and one small place you discover along the way.'
+      },
+      nature: {
+        title: 'Take the long way outside',
+        copy: 'Look for a nearby garden, coast or trail, and let the landscape set the pace for the day.'
+      },
+      slow: {
+        title: 'Leave space to do nothing',
+        copy: 'Keep part of the day unscheduled: linger over coffee, take a scenic detour and see where you end up.'
+      }
+    };
+
+    const budgetLabels = {
+      thoughtful: 'Thoughtful budget',
+      comfortable: 'Comfortable budget',
+      treat: 'Treat-yourself budget'
+    };
+
+    function addTripFact(iconName, label) {
+      const fact = document.createElement('span');
+      const icon = document.createElement('i');
+      icon.className = `fa-solid ${iconName}`;
+      icon.setAttribute('aria-hidden', 'true');
+      fact.append(icon, document.createTextNode(label));
+      tripResultFacts.append(fact);
+    }
+
+    tripForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!tripForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(tripForm);
+      const destination = formData.get('destination');
+      const destinationLabel = destination === 'Surprise me' ? 'somewhere wonderful' : destination;
+      const duration = Number(formData.get('duration'));
+      const travelers = Number(formData.get('travelers'));
+      const style = formData.get('style');
+      const budget = budgetLabels[formData.get('budget')];
+      const chosenInterests = formData.getAll('interests');
+      const dateValue = formData.get('date');
+      const dateLabel = dateValue
+        ? new Intl.DateTimeFormat(undefined, { month: 'long', year: 'numeric' }).format(new Date(`${dateValue}T12:00:00`))
+        : 'Dates still open';
+      const styleArticle = style === 'Easygoing' || style === 'Outdoorsy' ? 'An' : 'A';
+      const ideas = chosenInterests.length
+        ? chosenInterests.map((interest) => interestIdeas[interest])
+        : [{ title: 'Follow your curiosity', copy: 'Pick one thing that catches your eye, then let the rest of the day unfold around it.' }];
+
+      tripResultTitle.textContent = `${duration} days in ${destinationLabel}`;
+      tripResultSummary.textContent = `${styleArticle} ${style.toLowerCase()} escape with a little room to follow your curiosity.`;
+      tripResultFacts.replaceChildren();
+      tripItinerary.replaceChildren();
+      addTripFact('fa-calendar', dateLabel);
+      addTripFact('fa-user-group', `${travelers} ${travelers === 1 ? 'traveler' : 'travelers'}`);
+      addTripFact('fa-wallet', budget);
+
+      for (let day = 1; day <= duration; day += 1) {
+        let title;
+        let copy;
+
+        if (day === 1) {
+          title = 'Arrive & find your feet';
+          copy = `Settle into ${destinationLabel}, take an easy first wander and save the big plans for tomorrow.`;
+        } else if (day === duration) {
+          title = 'One last little adventure';
+          copy = 'Keep the morning gentle, revisit a favorite spot and leave yourself time for the journey home.';
+        } else {
+          const idea = ideas[(day - 2) % ideas.length];
+          title = idea.title;
+          copy = idea.copy;
+        }
+
+        const dayCard = document.createElement('article');
+        dayCard.className = 'trip-day';
+        const dayNumber = document.createElement('span');
+        dayNumber.className = 'trip-day__number';
+        dayNumber.append('Day');
+        const number = document.createElement('strong');
+        number.textContent = String(day).padStart(2, '0');
+        dayNumber.append(number);
+        const dayContent = document.createElement('div');
+        const dayTitle = document.createElement('h4');
+        dayTitle.textContent = title;
+        const dayCopy = document.createElement('p');
+        dayCopy.textContent = copy;
+        dayContent.append(dayTitle, dayCopy);
+        dayCard.append(dayNumber, dayContent);
+        tripItinerary.append(dayCard);
+      }
+
+      tripResult.hidden = false;
+      tripResult.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    });
+
+    tripForm.addEventListener('reset', () => {
+      tripResult.hidden = true;
+      tripResultFacts.replaceChildren();
+      tripItinerary.replaceChildren();
+    });
+  </script>
   <script src="Travel.js"></script>
-  </body>
-  </html>
+</body>
+</html>

@@ -3,98 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Pictures/Travel logo.png" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Travel journals, thoughtful itineraries, and inspiration for seeing the world at your own pace.">
+  <link rel="icon" type="image/png" href="Pictures/Travel logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="Travel.css">
-  <title>Stories</title>
+  <title>Travel Stories | TravelQuest</title>
+</head>
+<body class="stories-body">
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Pictures/Travel logo.png" alt="TravelQuest logo">
+        <span>TravelQuest</span>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="Destinations.html">Destinations</a>
+      <a href="Themes.html">Themes</a>
+      <a href="Stories.html">Stories</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="Plan a trip.html" class="header-cta">Plan a trip</a>
+      <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle dark mode">🌞</button>
+    </div>
+  </header>
 
-  </head>
-<body>
-  <!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Pictures/Travel logo.png" alt="logo" />
-      <span>TravelQuest</span>
-    </a>
-  </div>
+  <main class="stories-page">
+    <section class="stories-hero-new" aria-labelledby="stories-title">
+      <div class="stories-hero-new__image" aria-hidden="true"></div>
+      <div class="stories-hero-new__content" data-story-reveal>
+        <span class="stories-kicker"><i class="fa-solid fa-book-open"></i> The TravelQuest journal</span>
+        <h1 id="stories-title">The world is full of <em>good stories.</em></h1>
+        <p>Unhurried mornings, wrong turns that feel right, and the places that stay with you. Get inspired for the story you’ll tell next.</p>
+        <a class="stories-button stories-button--light" href="#journal">Wander through the journal <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <div class="stories-hero-new__stamp" aria-hidden="true"><span>Collect</span><strong>moments</strong><span>not miles</span><i class="fa-solid fa-asterisk"></i></div>
+      <div class="stories-hero-new__caption"><span>Field notes for the curious</span><span>ISSUE NO. 01</span></div>
+    </section>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="Destinations.html">Destinations</a>
-    <a href="Themes.html">Themes</a>
-    <a href="Stories.html">Stories</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-  </nav>
+    <section class="stories-feature" aria-labelledby="featured-story-title">
+      <div class="stories-feature__image" data-story-reveal>
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Traditional Kyoto street framed by vivid autumn leaves" loading="lazy">
+        <span class="stories-feature__image-note"><i class="fa-solid fa-location-dot"></i> Kyoto, Japan</span>
+      </div>
+      <div class="stories-feature__copy" data-story-reveal>
+        <span class="stories-kicker"><i class="fa-solid fa-sparkles"></i> The week's inspiration</span>
+        <h2 id="featured-story-title">A slower kind of <em>Kyoto morning</em></h2>
+        <p>Before the day gathers pace, the old lanes belong to soft light, quiet rituals, and the gentle pleasure of having nowhere else to be.</p>
+        <div class="stories-feature__meta"><span><i class="fa-regular fa-clock"></i> A 5-minute read</span><span>Culture &amp; slow travel</span></div>
+        <a class="stories-text-link" href="Japan.html">Explore Japan <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌞</button>
-</header>
-  <!-- Hero -->
-  <section class="Stories-hero">
-<h1 data-aos="fade-up">Real Stories <br> <span>True Adventures</span></h1>
-<p data-aos="fade-up">Explore authentic travel experiences and insights from fellow explorers</p>
-  </section>
+    <section class="stories-journal" id="journal" aria-labelledby="journal-title">
+      <div class="stories-journal__heading" data-story-reveal>
+        <div><span class="stories-kicker">A little inspiration for the road</span><h2 id="journal-title">Open a <em>travel story.</em></h2></div>
+        <p>Find a new favorite place, follow a feeling, or just see where the page takes you.</p>
+      </div>
 
-    <footer>
+      <div class="stories-tools" data-story-reveal>
+        <div class="stories-filter-list" role="group" aria-label="Filter stories by topic">
+          <button type="button" class="stories-filter is-active" data-filter="all" aria-pressed="true">All stories <span>06</span></button>
+          <button type="button" class="stories-filter" data-filter="coast" aria-pressed="false">Coast</button>
+          <button type="button" class="stories-filter" data-filter="outdoors" aria-pressed="false">Outdoors</button>
+          <button type="button" class="stories-filter" data-filter="culture" aria-pressed="false">Culture</button>
+          <button type="button" class="stories-filter" data-filter="city" aria-pressed="false">City life</button>
+        </div>
+        <label class="stories-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Search travel stories</span>
+          <input type="search" id="story-search" placeholder="Search the journal..." autocomplete="off">
+        </label>
+      </div>
+      <p class="stories-count" aria-live="polite"><span id="story-result-count">6</span> <span id="story-result-label">stories</span> to spark your next adventure</p>
+
+      <div class="stories-grid">
+        <article class="journal-card" data-category="coast" data-search="maldives island ocean blue water reef slow mornings beach">
+          <a class="journal-card__image" href="Maldives.html" aria-label="Explore the Maldives">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Aerial view of a tropical island and turquoise lagoon" loading="lazy">
+            <span class="journal-card__category">Coast &amp; islands</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> Maldives</span><h3>Where the horizon turns every shade of blue</h3><p>Island days have their own rhythm. Follow it out to the water and let the rest wait.</p><a class="journal-card__link" href="Maldives.html">Explore the island life <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="journal-card" data-category="outdoors" data-search="swiss alps mountains hike trail alpine fresh air outdoors">
+          <a class="journal-card__image" href="Swiss alps.html" aria-label="Explore the Swiss Alps">
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Mountain peaks glowing beneath the northern lights" loading="lazy">
+            <span class="journal-card__category">Outdoors</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> Swiss Alps</span><h3>Take the long way up</h3><p>Somewhere between the first climb and the far-off peaks, the everyday noise falls away.</p><a class="journal-card__link" href="Swiss alps.html">Find your mountain air <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="journal-card" data-category="city culture" data-search="new york city streets food art neighborhood urban">
+          <a class="journal-card__image" href="USA.html" aria-label="Explore New York City">
+            <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="New York City streets and skyline in warm evening light" loading="lazy">
+            <span class="journal-card__category">City life</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> New York, USA</span><h3>Let the neighborhood lead</h3><p>Skip the perfect plan. A good walk and a curious appetite are an itinerary all their own.</p><a class="journal-card__link" href="USA.html">Feel the city <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="journal-card" data-category="outdoors" data-search="sri lanka wildlife forest nature safari elephants green">
+          <a class="journal-card__image" href="Sri lanka.html" aria-label="Explore Sri Lanka">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Wild deer among trees in a sunlit woodland" loading="lazy">
+            <span class="journal-card__category">Nature</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> Sri Lanka</span><h3>Listen for the forest waking up</h3><p>Trade the alarm for birdsong and let a green, unhurried morning set the tone.</p><a class="journal-card__link" href="Sri lanka.html">Discover Sri Lanka <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="journal-card" data-category="culture" data-search="paris france culture art cafe streets architecture romance">
+          <a class="journal-card__image" href="France.html" aria-label="Explore Paris, France">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="The Eiffel Tower rising above Paris rooftops at sunset" loading="lazy">
+            <span class="journal-card__category">Culture</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> Paris, France</span><h3>One more little Parisian café</h3><p>Take the small table, order something lovely, and watch the city write the afternoon.</p><a class="journal-card__link" href="France.html">Wander through Paris <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="journal-card" data-category="coast outdoors" data-search="australia coast ocean road trip sunset beach open road">
+          <a class="journal-card__image" href="Ausi.html" aria-label="Explore Australia">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Australian coastline stretching beneath a blue sky" loading="lazy">
+            <span class="journal-card__category">Coast &amp; road trips</span>
+            <span class="journal-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="journal-card__body"><span class="journal-card__place"><i class="fa-solid fa-location-dot"></i> Australia</span><h3>Keep the windows down</h3><p>Salt air, open roads, and nowhere you need to be before the sun goes down.</p><a class="journal-card__link" href="Ausi.html">Take the coast road <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+      </div>
+      <p class="stories-empty" id="stories-empty" hidden>No stories found. Try a different place or topic.</p>
+    </section>
+
+    <section class="stories-invite" data-story-reveal>
+      <span class="stories-invite__spark" aria-hidden="true">✳</span>
+      <span class="stories-kicker">Your next chapter</span>
+      <h2>Somewhere out there is <em>your story.</em></h2>
+      <p>Start with a place that’s been on your mind. We’ll help you turn the daydream into a plan.</p>
+      <a class="stories-button" href="Plan a trip.html">Plan your next adventure <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+  </main>
+
+  <footer>
     <div class="footer-top">
-      <div class="footer-col" data-aos="fade-up">
-        <h3>🌍 WanderGuide</h3>
+      <div class="footer-col">
+        <h3>🌍 TravelQuest</h3>
         <p>Your compass to extraordinary adventures. We curate the world’s most beautiful destinations and help you create unforgettable experiences.</p>
         <div class="socials">
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-          <a href="#">▶️</a>
+          <a href="#" aria-label="TravelQuest on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TravelQuest on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TravelQuest on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="TravelQuest on YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Top Destinations</h3>
-        <a href="#">Santorini, Greece</a>
-        <a href="#">Kyoto, Japan</a>
-        <a href="#">Banff, Canada</a>
-        <a href="#">Maldives</a>
-        <a href="#">Patagonia, Chile</a>
-        <a href="#">Bali, Indonesia</a>
+        <a href="Maldives.html">Maldives</a><a href="Japan.html">Kyoto, Japan</a><a href="Canada.html">Banff, Canada</a>
+        <a href="France.html">Paris, France</a><a href="Ausi.html">Australia</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Travel Resources</h3>
-        <a href="#">Travel Guides</a>
-        <a href="#">Packing Lists</a>
-        <a href="#">Safety Tips</a>
-        <a href="#">Budget Planning</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Travel Insurance</a>
+        <a href="Destinations.html">Destination guides</a><a href="Themes.html">Find your travel style</a>
+        <a href="Plan a trip.html">Plan a trip</a><a href="Contact.html">Get in touch</a>
       </div>
-
-      <div class="footer-col" data-aos="fade-up">
+      <div class="footer-col">
         <h3>Get in Touch</h3>
-        <p>📧 hello@wanderguide.com</p>
-        <p>📞 +1 (234) 567-8900</p>
-        <p>📍 123 Adventure Street<br>San Francisco, CA 94105</p>
-
-        <div class="footer-newsletter" data-aos="fade-up">
-          <h4>Weekly Travel Newsletter</h4>
-          <input type="email" placeholder="Your email">
-          <button>Join</button>
-        </div>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@wanderguide.com</p>
+        <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (234) 567-8900</p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Adventure Street<br>San Francisco, CA 94105</p>
+        <a href="Contact.html">Send us a note <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      © 2025 WanderGuide. All rights reserved. | Privacy Policy | Terms of Service | Cookie Policy | Contact Us
-    </div>
+    <div class="footer-bottom">© 2025 TravelQuest. All rights reserved. | Privacy Policy | Terms of Service | Contact Us</div>
   </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // Animation duration (ms)
-    once: false,      // Animate only once per scroll
-  });
-</script>
+
+  <script>
+    document.documentElement.classList.add('has-story-reveal');
+
+    const storyCards = Array.from(document.querySelectorAll('.journal-card'));
+    const storyFilters = document.querySelectorAll('.stories-filter');
+    const storySearch = document.querySelector('#story-search');
+    const storyCount = document.querySelector('#story-result-count');
+    const storyCountLabel = document.querySelector('#story-result-label');
+    const storiesEmpty = document.querySelector('#stories-empty');
+    let activeStoryFilter = 'all';
+
+    function updateStories() {
+      const query = storySearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      storyCards.forEach((card) => {
+        const categories = card.dataset.category.split(' ');
+        const matchesFilter = activeStoryFilter === 'all' || categories.includes(activeStoryFilter);
+        const matchesSearch = `${card.dataset.search} ${card.textContent}`.toLowerCase().includes(query);
+        const isVisible = matchesFilter && matchesSearch;
+
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      storyCount.textContent = visibleCount;
+      storyCountLabel.textContent = visibleCount === 1 ? 'story' : 'stories';
+      storiesEmpty.hidden = visibleCount > 0;
+    }
+
+    storyFilters.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        activeStoryFilter = filter.dataset.filter;
+        storyFilters.forEach((button) => {
+          const isActive = button === filter;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-pressed', String(isActive));
+        });
+        updateStories();
+      });
+    });
+
+    storySearch.addEventListener('input', updateStories);
+
+    if ('IntersectionObserver' in window) {
+      const storyObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('[data-story-reveal]').forEach((element) => storyObserver.observe(element));
+    } else {
+      document.querySelectorAll('[data-story-reveal]').forEach((element) => element.classList.add('is-visible'));
+    }
+  </script>
   <script src="Travel.js"></script>
-  </body>
-  </html>
+</body>
+</html>
