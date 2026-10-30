@@ -73,3 +73,24 @@ function toggleTheme() {
   applyTheme(isDark);
   saveTheme(isDark);
 }
+
+if (document.body.classList.contains('destination-page') && 'IntersectionObserver' in window) {
+  const placeCards = document.querySelectorAll('.destination-places .place-card');
+  const placeCardObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -48px 0px',
+    threshold: 0.12
+  });
+
+  placeCards.forEach((card, index) => {
+    card.classList.add('place-card--reveal');
+    card.style.setProperty('--reveal-delay', `${(index % 3) * 80}ms`);
+    placeCardObserver.observe(card);
+  });
+}
